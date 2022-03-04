@@ -15,6 +15,9 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+            $table->string('schedule_type');
+            $table->string('schedule_id');
+            $table->boolean('is_seen')->default(false);
             $table->timestamps();
         });
     }
