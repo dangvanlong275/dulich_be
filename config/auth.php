@@ -42,7 +42,8 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+            // 'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
             'hash' => false,
         ],
@@ -113,5 +114,17 @@ return [
     */
 
     'password_timeout' => 10800,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Socialite
+    |--------------------------------------------------------------------------
+    */
+    'socialite' => [
+        'drivers' => [
+            'google',
+            'facebook'
+        ],
+    ],
 
 ];
