@@ -1,0 +1,7 @@
+deploy_staging:
+  stage: deploy
+  script: git push staging HEAD:develop
+    - echo "Deploy to dulich-be server"
+  environment:
+    name: staging
+    url: https://dulich.stdiohue.com
